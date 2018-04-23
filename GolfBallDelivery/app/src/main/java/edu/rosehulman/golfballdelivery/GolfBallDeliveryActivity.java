@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
@@ -15,7 +16,9 @@ import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class GolfBallDeliveryActivity extends Activity {
+import edu.rosehulman.me435.RobotActivity;
+
+public class GolfBallDeliveryActivity extends RobotActivity {
 
 	/** Constant used with logging that you'll see later. */
 	public static final String TAG = "GolfBallDelivery";
@@ -179,12 +182,14 @@ public class GolfBallDeliveryActivity extends Activity {
 
     // --------------------------- Methods added ---------------------------
 
+    @Override
+    public void loop() {
+        super.loop();
+        Log.d(TAG, "loop: This is loop within our subclass of Robot Activity");
+    }
 
-	
-	
-	
-	
-	// --------------------------- Drive command ---------------------------
+
+    // --------------------------- Drive command ---------------------------
 	
 	
 
